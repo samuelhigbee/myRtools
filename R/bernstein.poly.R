@@ -5,6 +5,7 @@
 #' @param X A vector of predictors
 #' @param K The order of the polynomial
 #' @param space The values at which to predict
+#' @export
 
 bernstein.poly <- function(Y, X, K=1, space) {
   Z <- NULL

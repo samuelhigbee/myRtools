@@ -5,7 +5,8 @@
 #' @param X A vector of predictors
 #' @param order The order of the polynomial
 #' @param space The values at which to predict
-#'
+#' @export
+
 sieve <- function(Y, X, order=1, space) {
   Z <- NULL
   Z.predict <- NULL

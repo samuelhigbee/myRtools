@@ -6,6 +6,7 @@
 #' @param h The one-half bandwidth to use in the Epanechnikov kernel
 #' @param order The order of the polynomial
 #' @param space The values at which to predict
+#' @export
 
 local.polynomial <- function(Y, X, h, order=0, space) {
   # empty vector of predicted vals

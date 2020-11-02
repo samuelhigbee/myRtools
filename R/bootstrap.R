@@ -5,6 +5,7 @@
 #' @param func The function to be repeated.  The output of func should be the
 #' estimate of interest.
 #' @param S The number of samples to draw
+#' @export
 
 bootstrap <- function(dt,func,S) {
   estimates <- NULL

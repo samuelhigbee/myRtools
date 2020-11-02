@@ -5,7 +5,8 @@
 #' @param X A vector of predictors
 #' @param knots The number of knots in the spline
 #' @param space A vector of X values at which to predict
-#'
+#' @export
+
 lin.spline <- function(Y, X, knots=4, space){
   # construct data for least squares estimation
   Z <- cbind(1,X)

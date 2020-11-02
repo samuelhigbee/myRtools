@@ -6,6 +6,7 @@
 #' @param beta The vector of linear regression estimates
 #' @param groupvar A vector of group categorical variables assigning each
 #' element of Y to a group
+#' @export
 
 cluster.var <- function(Y, X, beta, groupvar) {
   groups <- unique(groupvar)

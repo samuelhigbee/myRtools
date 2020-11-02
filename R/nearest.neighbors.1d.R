@@ -6,6 +6,7 @@
 #' @param X A vector of predictors
 #' @param k The number of neighbors to use
 #' @param space The values at which to predict
+#' @export
 
 nearest.neighbors.1d <- function(Y, X, k=1, space) {
   predicted.vals <- rep(NA,length(space))
