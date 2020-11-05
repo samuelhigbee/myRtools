@@ -6,7 +6,7 @@
 #' @param beta The vector of linear regression estimates
 #' @export
 
-hc0.var <- function(Y, X, beta) {
+hc1.var <- function(Y, X, beta) {
   resid <- as.vector(Y - X %*% beta)
   df.correct <- length(Y) / (length(Y) - length(beta))
   var <- solve(t(X)%*%X) %*% t(X)%*%diag(resid^2)%*%X %*% solve(t(X)%*%X)
