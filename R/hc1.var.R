@@ -9,6 +9,7 @@
 hc1.var <- function(Y, X, beta) {
   resid <- as.vector(Y - X %*% beta)
   df.correct <- length(Y) / (length(Y) - length(beta))
-  var <- solve(t(X)%*%X) %*% t(X)%*%diag(resid^2)%*%X %*% solve(t(X)%*%X)
+  var <- df.correct *
+    solve(t(X)%*%X) %*% t(X)%*%diag(resid^2)%*%X %*% solve(t(X)%*%X)
   return(var)
 }
