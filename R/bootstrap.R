@@ -13,6 +13,6 @@ bootstrap <- function(dt,func,S) {
     dt.new <- sample(dt,nrow(dt),replace=TRUE)
     estimates <- rbind(estimates,func(dt.new))
   }
-  V <- 1/S * t(estimates) %*% estimates - 1/S^2 * colSums(estimates)
+  V <- 1/S * t(estimates) %*% estimates - 1/S^2 * colSums(estimates)^2
   return(V)
 }
