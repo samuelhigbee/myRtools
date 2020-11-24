@@ -4,7 +4,7 @@
 \alias{lin.reg}
 \title{Basic linear regression}
 \usage{
-lin.reg(Y, X)
+lin.reg(Y, X, const = TRUE)
 }
 \arguments{
 \item{Y}{The outcome variables}
