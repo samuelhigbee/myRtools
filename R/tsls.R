@@ -7,10 +7,14 @@
 #' @param W The included instruments or controls
 #' @export
 
-tsls <- function(Y, X, Z, W) {
+tsls <- function(Y, X, Z, W, const=TRUE) {
   n.Z <- cbind(Z,W)
   n.X <- cbind(X,W)
-  beta <- solve( t(n.X) %*% n.Z %*% solve(t(n.Z)%*%n.Z) %*% t(n.Z) %*% n.X) %*% 
+  if (const==TRUE) {
+    n.Z <- cbind(1,n.Z)
+    n.X <- cbind(1,n.X)
+  }
+  beta <- solve( t(n.X) %*% n.Z %*% solve(t(n.Z)%*%n.Z) %*% t(n.Z) %*% n.X) %*%
     t(n.X) %*% n.Z %*% solve(t(n.Z)%*%n.Z) %*% t(n.Z) %*% Y
   return(beta)
 }

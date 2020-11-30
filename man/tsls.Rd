@@ -4,7 +4,7 @@
 \alias{tsls}
 \title{Two-stage least squares}
 \usage{
-tsls(Y, X, Z, W)
+tsls(Y, X, Z, W, const = TRUE)
 }
 \arguments{
 \item{Y}{The outcome variables}
