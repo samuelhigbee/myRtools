@@ -4,7 +4,7 @@
 \alias{hc1.var}
 \title{Heteroskedasticity robust HC1 covariance matrix}
 \usage{
-hc1.var(Y, X, beta)
+hc1.var(Y, X, beta, const = TRUE)
 }
 \arguments{
 \item{Y}{The Y data used in estimation}
@@ -12,6 +12,8 @@ hc1.var(Y, X, beta)
 \item{X}{The X data used in estimation}
 
 \item{beta}{The vector of linear regression estimates}
+
+\item{const}{If TRUE, adds a constant column to the data}
 }
 \description{
 Computes HC1 covariance matrix of estimates

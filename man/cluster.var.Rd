@@ -4,7 +4,7 @@
 \alias{cluster.var}
 \title{Cluster corrected covariance matrix}
 \usage{
-cluster.var(Y, X, beta, groupvar)
+cluster.var(Y, X, beta, groupvar, const = TRUE)
 }
 \arguments{
 \item{Y}{The Y data used in estimation}
@@ -15,6 +15,8 @@ cluster.var(Y, X, beta, groupvar)
 
 \item{groupvar}{A vector of group categorical variables assigning each
 element of Y to a group}
+
+\item{const}{If TRUE, adds a constant column to the data}
 }
 \description{
 Computes the cluster corrected covariance matrix of estimates

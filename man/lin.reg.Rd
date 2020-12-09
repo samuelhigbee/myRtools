@@ -4,12 +4,16 @@
 \alias{lin.reg}
 \title{Basic linear regression}
 \usage{
-lin.reg(Y, X, const = TRUE)
+lin.reg(Y, X, const = TRUE, tol = .Machine$double.eps)
 }
 \arguments{
 \item{Y}{The outcome variables}
 
 \item{X}{The explanatory variables}
+
+\item{const}{If TRUE, adds a constant column to the data}
+
+\item{tol}{Tolerance level for matrix inversion}
 }
 \description{
 Estimates linear regression coefficients. Standard errors should be computed
