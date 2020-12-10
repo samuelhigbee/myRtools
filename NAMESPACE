@@ -3,6 +3,7 @@
 export(anderson.rubin)
 export(bernstein.poly)
 export(bootstrap)
+export(classic.var)
 export(cluster.var)
 export(epanechnikov)
 export(hc0.var)

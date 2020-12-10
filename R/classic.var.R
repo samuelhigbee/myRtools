@@ -6,7 +6,7 @@
 #' @param const If TRUE, adds a constant column to the data
 #' @export
 
-hc0.var <- function(Y, X, beta) {
+classic.var <- function(Y, X, beta, const=TRUE) {
   n.X <- as.matrix(X)
   n.Y <- as.matrix(Y)
   if (const==TRUE) {
