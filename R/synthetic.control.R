@@ -28,7 +28,9 @@ synthetic.control <- function(Y, X, space, penalty=0) {
   model$ub <- rep(1,nrow(n.X))
   model$sense <- c("=")
 
-  soln <- gurobi::gurobi(model)
+  params <- list(OutputFlag=0)
+
+  soln <- gurobi::gurobi(model, params=params)
   weights <- soln$x
 
   pred.Y <- t(weights)%*%cbind(n.X,n.Y)
